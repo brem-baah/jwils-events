@@ -1,0 +1,464 @@
+:root {
+    --gold: #c9a84c;
+    --gold-light: #e8c97e;
+    --dark: #111111;
+    --dark-card: #1a1a1a;
+    --dark-border: #2a2a2a;
+    --cream: #faf6ee;
+    --muted: #cccaca;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--dark);
+    color: var(--cream);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ── NAVBAR ── */
+.jwils-nav {
+    background: rgba(17, 17, 17, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--dark-border);
+    padding: 1rem 0;
+}
+.jwils-nav .navbar-brand {
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    color: var(--gold) !important;
+    letter-spacing: 0.05em;
+}
+.jwils-nav .nav-link {
+    color: rgba(250, 246, 238, 0.75) !important;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+.jwils-nav .nav-link:hover {
+    color: var(--gold) !important;
+}
+
+/* ── HERO ── */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(
+            ellipse 80% 60% at 50% 50%,
+            rgba(201, 168, 76, 0.1) 0%,
+            transparent 70%
+        ),
+        repeating-linear-gradient(
+            -55deg,
+            transparent,
+            transparent 60px,
+            rgba(201, 168, 76, 0.025) 60px,
+            rgba(201, 168, 76, 0.025) 61px
+        ),
+        var(--dark);
+    padding: 7rem 0 5rem;
+}
+
+.eyebrow-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201, 168, 76, 0.4);
+    padding: 0.4rem 1.2rem;
+    border-radius: 100px;
+}
+
+.hero-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--cream);
+}
+.hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--muted);
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    color: var(--cream);
+    opacity: 0.85;
+}
+.meta-item i {
+    color: var(--gold);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: #111 !important;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.9rem 2.4rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(201, 168, 76, 0.45);
+}
+
+/* ── PROOF BAND ── */
+.proof-band {
+    background: var(--dark-card);
+    border-top: 1px solid var(--dark-border);
+    border-bottom: 1px solid var(--dark-border);
+    padding: 4.5rem 0;
+}
+.proof-quote {
+    font-family: "Libre Baskerville", serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.6;
+}
+.quote-open {
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: 0.2;
+    line-height: 0.6;
+    vertical-align: top;
+}
+.proof-cite {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+/* ── SHARED SECTION ATOMS ── */
+.section-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+.section-title em {
+    font-style: italic;
+    color: var(--gold-light);
+}
+
+.gold-line {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+}
+
+/* ── MODULES ── */
+.modules-section {
+    background: var(--dark);
+    padding: 6rem 0;
+}
+.module-card {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 10px;
+    padding: 2.2rem 1.8rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+}
+.module-card:hover {
+    border-color: rgba(201, 168, 76, 0.45);
+    transform: translateY(-4px);
+}
+.module-num {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(201, 168, 76, 0.1);
+    line-height: 1;
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+}
+.module-icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+.module-card h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cream);
+    margin-bottom: 1.2rem;
+}
+.learn-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.learn-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.55;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.learn-list li:last-child {
+    border-bottom: none;
+}
+.learn-list li i {
+    color: var(--gold);
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    margin-top: 0.35rem;
+}
+
+/* ── PRICING ── */
+.pricing-section {
+    background: var(--dark-card);
+    border-top: 1px solid var(--dark-border);
+    padding: 6rem 0;
+}
+.price-card {
+    background: var(--dark);
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    border-radius: 12px;
+    padding: 3rem 2.5rem;
+    position: relative;
+}
+.price-tag {
+    position: absolute;
+    top: -1px;
+    right: 2rem;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: #111;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.9rem;
+    border-radius: 0 0 8px 8px;
+}
+.price-amount {
+    font-family: "Playfair Display", serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+}
+.price-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.price-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.92rem;
+    color: var(--cream);
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--dark-border);
+}
+.price-features li:last-child {
+    border-bottom: none;
+}
+.price-features li i {
+    color: var(--gold);
+    width: 16px;
+}
+.seats-warning {
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+}
+
+/* ── MODAL ── */
+.modal-content {
+    background: #1a1a1a;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 12px;
+    color: var(--cream);
+}
+.modal-header {
+    border-bottom: 1px solid var(--dark-border);
+    padding: 1.5rem 1.8rem;
+}
+.modal-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: var(--cream);
+}
+.btn-close {
+    filter: invert(1) opacity(0.5);
+}
+.btn-close:hover {
+    filter: invert(1) opacity(1);
+}
+.modal-body {
+    padding: 1.8rem;
+}
+
+.form-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+.form-control,
+.form-select {
+    background: #111 !important;
+    border: 1px solid var(--dark-border) !important;
+    border-radius: 6px !important;
+    color: var(--cream) !important;
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+    transition: border-color 0.2s;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--gold) !important;
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15) !important;
+}
+.form-control::placeholder {
+    color: #555 !important;
+}
+
+.plan-option {
+    border: 1.5px solid var(--dark-border);
+    border-radius: 8px;
+    padding: 1rem 0.8rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+}
+.plan-option.selected {
+    border-color: var(--gold);
+    background: rgba(201, 168, 76, 0.07);
+}
+.plan-option .plan-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+.plan-option .plan-price {
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+}
+.plan-option .plan-sub {
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+
+/* ── FOOTER ── */
+footer {
+    background: #0a0a0a;
+    border-top: 1px solid var(--dark-border);
+    padding: 3rem 0;
+}
+.footer-brand {
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-muted {
+    color: var(--muted) !important;
+}
+
+.whatsapp-sticky-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 62px;
+    height: 62px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+    animation: pulse 2s infinite;
+    transition: transform 0.2s;
+}
+.whatsapp-sticky-btn:hover { transform: scale(1.15); }
+@keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+    70%  { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* Media Queries */
+@media (max-width: 767.98px) {
+    .price-amount {
+        font-size: 2.5rem;
+    }
+}
