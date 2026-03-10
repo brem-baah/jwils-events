@@ -559,7 +559,7 @@ footer {
 }
 
 @media (max-width: 575.98px) {
-    .hero-img { height: 300px; }
+    /* .hero-img { height: 300px; } */
 }
 
 /* ── LIGHTBOX ── */
