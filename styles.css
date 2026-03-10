@@ -55,6 +55,7 @@ a {
 /* ── HERO ── */
 .hero-section {
     min-height: 100vh;
+    object-fit: contain;
     display: flex;
     align-items: center;
     background:
