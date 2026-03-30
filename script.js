@@ -5,8 +5,8 @@
     const WHATSAPP_NUMBER     = '233500860750';
 
     const PLANS = {
-        full: { label: 'Full Payment',  amount: 200000, display: 'GH¢2,000' },
-        half: { label: 'Half Payment',  amount: 100000, display: 'GH¢1,000' }
+        full: { label: 'Full Payment',  amount: 100000, display: 'GH¢2,000' },
+        half: { label: 'Half Payment',  amount: 50000, display: 'GH¢1,000' }
     };
 
     // ── SCROLL REVEAL ────────────────────────────────────────────────────────
